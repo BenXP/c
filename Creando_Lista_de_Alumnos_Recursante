@@ -1,0 +1,42 @@
+#include <stdio.h>
+int main()
+{
+	int m,n,y,i,j,k,lib[100],act[100];
+	printf("\n ingrese valor de LIB:");
+	scanf("\n %d",&m);
+	for(i=1;i<=m;i++)
+	{
+		printf("\n ingrese documento del alumno libre:");
+		scanf("\n %d",&lib[i]);
+	}
+	printf("\n ingrese valor de ACT:");
+	scanf("\n %d",&n);
+	for(j=1;j<=n;j++)
+	{
+		printf("\n ingrese documento del nuevo alumno que cursara:");
+		scanf("\n %d",&act[j]);
+		for(i=1;i<=m;i++)
+		{
+			if(lib[i]==act[j])
+			{
+				printf("\n es un recursante la cursara de vuelta %d",lib[i]);
+				for(k=i;k<=m-1;k++)
+				{
+					lib[k]=lib[k+1];
+				}
+				m=m-1;
+			}
+		}
+	}
+	printf("\n la nueva lista del 2017 de alumno es:");
+	for(j=1;j<=n;j++)
+	{
+		printf("\n %d ",act[j]);
+	}
+	printf("\n la lista de los libres quedo de esta manera:");
+	for(i=1;i<=m;i++)
+	{
+		printf("\n %d",lib[i]);
+	}
+	return 0;
+}
