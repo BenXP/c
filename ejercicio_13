@@ -1,0 +1,32 @@
+#include <stdio.h>
+int main()
+{
+	int k,ban,a,b,aux,r;
+	printf("\n ingrese parametro:");
+	scanf("%d",&k);
+	ban=0;
+	while(ban==0)
+	{
+		if(k>2)
+		{
+			ban=1;
+		}
+		else
+		{
+			printf("\n ingrese parametro:");
+			scanf("%d",&k);
+		}	
+	}
+	r=0;
+	a=1;
+	b=2;
+	while(r<k)
+	{
+		aux=a+1;
+		r=a*b;
+		printf("\n el producto es %d",r);
+		a=b+1;
+		b=aux;
+	}
+	return 0;
+}	
